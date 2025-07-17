@@ -6,7 +6,7 @@ This document describes the data pipeline for the raw.AnalyticsEngine_customer_k
 ## Entity Information
 - **Raw Entity**: raw.AnalyticsEngine_customer_kpi
 - **Curated Entity**: curated.AnalyticsEngine_customer_kpi
-- **Generated**: 2025-07-17T06:40:53.838Z
+- **Generated**: 2025-07-17T07:41:14.932Z
 
 ## Column Mappings
 - **cust_id** → **cust_id**: Direct mapping
