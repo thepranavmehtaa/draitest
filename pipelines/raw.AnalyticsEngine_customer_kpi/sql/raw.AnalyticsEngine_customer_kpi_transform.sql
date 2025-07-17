@@ -2,7 +2,7 @@
 -- Create curated table with transformations
 
 CREATE TABLE IF NOT EXISTS curated.AnalyticsEngine_customer_kpi (
-    cust_id BIGINT,
+    cust1_id BIGINT,
     arpu VARCHAR(255),
     ltv VARCHAR(255),
     churn_score VARCHAR(255),
@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS curated.AnalyticsEngine_customer_kpi (
     last_updated TIMESTAMP,
     updated_at TIMESTAMP,
     version VARCHAR(255),
-    is_deleted BOOLEAN
+    is_deleted BOOLEAN,
+    test 1 VARCHAR(255)
 );
 
 -- Insert transformed data
@@ -23,6 +24,7 @@ SELECT
     churn_score as churn_score,
     nps as nps,
     tenure as tenure,
-    last_updated as last_updated
+    last_updated as last_updated,
+    NULL as test 1
 FROM raw_AnalyticsEngine_customer_kpi;
 
