@@ -2,20 +2,40 @@
 -- Create curated table with transformations
 
 CREATE TABLE IF NOT EXISTS CatalogDB_product (
-    id BIGINT,
-    name VARCHAR(255),
+    product_id BIGINT,
+    product_name VARCHAR(255),
     description VARCHAR(255),
-    created_at VARCHAR(255),
-    updated_at TIMESTAMP
+    category VARCHAR(255),
+    subcategory VARCHAR(255),
+    brand VARCHAR(255),
+    price DECIMAL(10,2),
+    cost DECIMAL(10,2),
+    sku VARCHAR(255),
+    weight VARCHAR(255),
+    dimensions VARCHAR(255),
+    created_date TIMESTAMP,
+    updated_date TIMESTAMP,
+    status VARCHAR(255),
+    inventory_level VARCHAR(255)
 );
 
 -- Insert transformed data
 INSERT INTO CatalogDB_product
 SELECT
-    id as id,
-    name as name,
+    product_id as product_id,
+    product_name as product_name,
     description as description,
-    created_at as created_at,
-    updated_at as updated_at
+    category as category,
+    subcategory as subcategory,
+    brand as brand,
+    price as price,
+    cost as cost,
+    sku as sku,
+    weight as weight,
+    dimensions as dimensions,
+    created_date as created_date,
+    updated_date as updated_date,
+    status as status,
+    inventory_level as inventory_level
 FROM raw_CatalogDB_product;
 
