@@ -5,8 +5,11 @@ CREATE TABLE IF NOT EXISTS BillingSystem_payment_method (
     id BIGINT,
     name VARCHAR(255),
     description VARCHAR(255),
-    created_at VARCHAR(255),
-    updated_at TIMESTAMP
+    status VARCHAR(255),
+    created_date TIMESTAMP,
+    updated_date TIMESTAMP,
+    created_by VARCHAR(255),
+    updated_by TIMESTAMP
 );
 
 -- Insert transformed data
@@ -15,7 +18,10 @@ SELECT
     id as id,
     name as name,
     description as description,
-    created_at as created_at,
-    updated_at as updated_at
+    status as status,
+    created_date as created_date,
+    updated_date as updated_date,
+    created_by as created_by,
+    updated_by as updated_by
 FROM raw_BillingSystem_payment_method;
 
