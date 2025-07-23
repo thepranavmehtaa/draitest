@@ -14,8 +14,6 @@ CREATE TABLE IF NOT EXISTS AnalyticsEngine_customer_kpi (
     created_date TIMESTAMP,
     updated_date TIMESTAMP,
     status VARCHAR(255),
-    customer_type VARCHAR(255),
-    credit_limit VARCHAR(255),
     preferred_contact_method VARCHAR(255)
 );
 
@@ -34,8 +32,6 @@ SELECT
     created_date as created_date,
     updated_date as updated_date,
     status as status,
-    customer_type as customer_type,
-    credit_limit as credit_limit,
     preferred_contact_method as preferred_contact_method
 FROM raw_AnalyticsEngine_customer_kpi;
 
