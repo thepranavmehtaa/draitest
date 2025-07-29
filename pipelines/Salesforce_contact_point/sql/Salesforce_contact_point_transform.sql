@@ -2,26 +2,27 @@
 -- Create curated table with transformations
 
 CREATE TABLE IF NOT EXISTS Salesforce_contact_point (
-    id BIGINT,
-    name VARCHAR(255),
-    description VARCHAR(255),
-    status VARCHAR(255),
-    created_date TIMESTAMP,
-    updated_date TIMESTAMP,
-    created_by VARCHAR(255),
-    updated_by TIMESTAMP
+    ContactPointID VARCHAR(255),
+    CustomerID VARCHAR(255),
+    ContactType VARCHAR(255),
+    Value VARCHAR(255),
+    Preferred VARCHAR(255),
+    Verified VARCHAR(255),
+    LastUpdated TIMESTAMP,
+    updated_at TIMESTAMP,
+    version VARCHAR(255),
+    is_deleted BOOLEAN
 );
 
 -- Insert transformed data
 INSERT INTO Salesforce_contact_point
 SELECT
-    id as id,
-    name as name,
-    description as description,
-    status as status,
-    created_date as created_date,
-    updated_date as updated_date,
-    created_by as created_by,
-    updated_by as updated_by
+    ContactPointID as ContactPointID,
+    CustomerID as CustomerID,
+    ContactType as ContactType,
+    Value as Value,
+    Preferred as Preferred,
+    Verified as Verified,
+    LastUpdated as LastUpdated
 FROM raw_Salesforce_contact_point;
 

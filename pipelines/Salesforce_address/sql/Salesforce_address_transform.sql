@@ -2,26 +2,29 @@
 -- Create curated table with transformations
 
 CREATE TABLE IF NOT EXISTS Salesforce_address (
-    id BIGINT,
-    name VARCHAR(255),
-    description VARCHAR(255),
-    status VARCHAR(255),
-    created_date TIMESTAMP,
-    updated_date TIMESTAMP,
-    created_by VARCHAR(255),
-    updated_by TIMESTAMP
+    AddressID VARCHAR(255),
+    CustomerID VARCHAR(255),
+    Street VARCHAR(255),
+    City VARCHAR(255),
+    State VARCHAR(255),
+    Postcode VARCHAR(255),
+    Country VARCHAR(255),
+    AddressType VARCHAR(255),
+    updated_at TIMESTAMP,
+    version VARCHAR(255),
+    is_deleted BOOLEAN
 );
 
 -- Insert transformed data
 INSERT INTO Salesforce_address
 SELECT
-    id as id,
-    name as name,
-    description as description,
-    status as status,
-    created_date as created_date,
-    updated_date as updated_date,
-    created_by as created_by,
-    updated_by as updated_by
+    AddressID as AddressID,
+    CustomerID as CustomerID,
+    Street as Street,
+    City as City,
+    State as State,
+    Postcode as Postcode,
+    Country as Country,
+    AddressType as AddressType
 FROM raw_Salesforce_address;
 

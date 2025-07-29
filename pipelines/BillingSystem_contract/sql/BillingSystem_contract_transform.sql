@@ -2,26 +2,27 @@
 -- Create curated table with transformations
 
 CREATE TABLE IF NOT EXISTS BillingSystem_contract (
-    id BIGINT,
-    name VARCHAR(255),
-    description VARCHAR(255),
-    status VARCHAR(255),
-    created_date TIMESTAMP,
-    updated_date TIMESTAMP,
-    created_by VARCHAR(255),
-    updated_by TIMESTAMP
+    ContractID VARCHAR(255),
+    AccountID INTEGER,
+    ContractType VARCHAR(255),
+    StartDate VARCHAR(255),
+    EndDate VARCHAR(255),
+    Status VARCHAR(255),
+    RenewalTerms VARCHAR(255),
+    updated_at TIMESTAMP,
+    version VARCHAR(255),
+    is_deleted BOOLEAN
 );
 
 -- Insert transformed data
 INSERT INTO BillingSystem_contract
 SELECT
-    id as id,
-    name as name,
-    description as description,
-    status as status,
-    created_date as created_date,
-    updated_date as updated_date,
-    created_by as created_by,
-    updated_by as updated_by
+    ContractID as ContractID,
+    AccountID as AccountID,
+    ContractType as ContractType,
+    StartDate as StartDate,
+    EndDate as EndDate,
+    Status as Status,
+    RenewalTerms as RenewalTerms
 FROM raw_BillingSystem_contract;
 

@@ -2,26 +2,27 @@
 -- Create curated table with transformations
 
 CREATE TABLE IF NOT EXISTS BillingSystem_invoice (
-    id BIGINT,
-    name VARCHAR(255),
-    description VARCHAR(255),
-    status VARCHAR(255),
-    created_date TIMESTAMP,
-    updated_date TIMESTAMP,
-    created_by VARCHAR(255),
-    updated_by TIMESTAMP
+    InvoiceID VARCHAR(255),
+    AccountID INTEGER,
+    InvoiceDate VARCHAR(255),
+    DueDate VARCHAR(255),
+    TotalAmount VARCHAR(255),
+    Status VARCHAR(255),
+    PaidDate BIGINT,
+    updated_at TIMESTAMP,
+    version VARCHAR(255),
+    is_deleted BOOLEAN
 );
 
 -- Insert transformed data
 INSERT INTO BillingSystem_invoice
 SELECT
-    id as id,
-    name as name,
-    description as description,
-    status as status,
-    created_date as created_date,
-    updated_date as updated_date,
-    created_by as created_by,
-    updated_by as updated_by
+    InvoiceID as InvoiceID,
+    AccountID as AccountID,
+    InvoiceDate as InvoiceDate,
+    DueDate as DueDate,
+    TotalAmount as TotalAmount,
+    Status as Status,
+    PaidDate as PaidDate
 FROM raw_BillingSystem_invoice;
 

@@ -2,26 +2,27 @@
 -- Create curated table with transformations
 
 CREATE TABLE IF NOT EXISTS Salesforce_account (
-    id BIGINT,
-    name VARCHAR(255),
-    description VARCHAR(255),
+    account_id BIGINT,
+    customer_id BIGINT,
+    acct_type VARCHAR(255),
+    billing_cycle VARCHAR(255),
+    currency VARCHAR(255),
     status VARCHAR(255),
-    created_date TIMESTAMP,
-    updated_date TIMESTAMP,
-    created_by VARCHAR(255),
-    updated_by TIMESTAMP
+    created_at VARCHAR(255),
+    updated_at TIMESTAMP,
+    version VARCHAR(255),
+    is_deleted BOOLEAN
 );
 
 -- Insert transformed data
 INSERT INTO Salesforce_account
 SELECT
-    id as id,
-    name as name,
-    description as description,
+    account_id as account_id,
+    customer_id as customer_id,
+    acct_type as acct_type,
+    billing_cycle as billing_cycle,
+    currency as currency,
     status as status,
-    created_date as created_date,
-    updated_date as updated_date,
-    created_by as created_by,
-    updated_by as updated_by
+    created_at as created_at
 FROM raw_Salesforce_account;
 
