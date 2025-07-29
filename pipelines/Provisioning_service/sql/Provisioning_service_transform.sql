@@ -2,26 +2,27 @@
 -- Create curated table with transformations
 
 CREATE TABLE IF NOT EXISTS Provisioning_service (
-    id BIGINT,
-    name VARCHAR(255),
-    description VARCHAR(255),
-    status VARCHAR(255),
-    created_date TIMESTAMP,
-    updated_date TIMESTAMP,
-    created_by VARCHAR(255),
-    updated_by TIMESTAMP
+    svc_id BIGINT,
+    sub_ref VARCHAR(255),
+    svc_type VARCHAR(255),
+    svc_status VARCHAR(255),
+    start VARCHAR(255),
+    end VARCHAR(255),
+    qos VARCHAR(255),
+    updated_at TIMESTAMP,
+    version VARCHAR(255),
+    is_deleted BOOLEAN
 );
 
 -- Insert transformed data
 INSERT INTO Provisioning_service
 SELECT
-    id as id,
-    name as name,
-    description as description,
-    status as status,
-    created_date as created_date,
-    updated_date as updated_date,
-    created_by as created_by,
-    updated_by as updated_by
+    svc_id as svc_id,
+    sub_ref as sub_ref,
+    svc_type as svc_type,
+    svc_status as svc_status,
+    start as start,
+    end as end,
+    qos as qos
 FROM raw_Provisioning_service;
 

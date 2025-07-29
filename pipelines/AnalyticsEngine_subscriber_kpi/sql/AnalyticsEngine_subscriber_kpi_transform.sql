@@ -2,26 +2,27 @@
 -- Create curated table with transformations
 
 CREATE TABLE IF NOT EXISTS AnalyticsEngine_subscriber_kpi (
-    id BIGINT,
-    name VARCHAR(255),
-    description VARCHAR(255),
-    status VARCHAR(255),
-    created_date TIMESTAMP,
-    updated_date TIMESTAMP,
-    created_by VARCHAR(255),
-    updated_by TIMESTAMP
+    sub_id BIGINT,
+    avg_data VARCHAR(255),
+    avg_voice VARCHAR(255),
+    drop_rate VARCHAR(255),
+    sms VARCHAR(255),
+    region VARCHAR(255),
+    last_updated TIMESTAMP,
+    updated_at TIMESTAMP,
+    version VARCHAR(255),
+    is_deleted BOOLEAN
 );
 
 -- Insert transformed data
 INSERT INTO AnalyticsEngine_subscriber_kpi
 SELECT
-    id as id,
-    name as name,
-    description as description,
-    status as status,
-    created_date as created_date,
-    updated_date as updated_date,
-    created_by as created_by,
-    updated_by as updated_by
+    sub_id as sub_id,
+    avg_data as avg_data,
+    avg_voice as avg_voice,
+    drop_rate as drop_rate,
+    sms as sms,
+    region as region,
+    last_updated as last_updated
 FROM raw_AnalyticsEngine_subscriber_kpi;
 
