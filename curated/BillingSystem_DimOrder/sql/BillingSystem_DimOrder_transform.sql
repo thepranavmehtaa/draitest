@@ -8,7 +8,6 @@ CREATE TABLE IF NOT EXISTS BillingSystem_DimOrder (
     status VARCHAR(255),
     type VARCHAR(255),
     origin VARCHAR(255),
-    value VARCHAR(255),
     updated TIMESTAMP,
     updated_at TIMESTAMP,
     version VARCHAR(255),
@@ -24,7 +23,6 @@ SELECT
     status as status,
     type as type,
     origin as origin,
-    value as value,
     updated as updated
 FROM raw_BillingSystem_DimOrder;
 
