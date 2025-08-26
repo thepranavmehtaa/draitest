@@ -1,5 +1,5 @@
 # DML Operations for UsagePlatform_fact_usage
-# Generated on: 2025-08-26T09:01:40.620Z
+# Generated on: 2025-08-26T11:37:31.641Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,7 +22,15 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-
+        col("usage_id").alias("usage_id"),
+        col("sub_id").alias("sub_id"),
+        col("usage_date").alias("usage_date"),
+        col("type").alias("type"),
+        col("volume").alias("volume"),
+        col("minutes").alias("minutes"),
+        col("sms").alias("sms"),
+        col("region").alias("region"),
+        col("roaming").alias("roaming")
     )
     
     # Add control columns
