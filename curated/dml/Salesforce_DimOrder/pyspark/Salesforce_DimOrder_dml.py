@@ -1,5 +1,5 @@
 # DML Operations for Salesforce_DimOrder
-# Generated on: 2025-08-26T08:43:06.044Z
+# Generated on: 2025-08-26T09:01:08.339Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,14 +22,7 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-        col("order_id").alias("order_id"),
-        col("customer_id").alias("customer_id"),
-        col("order_date").alias("order_date"),
-        col("order_status").alias("order_status"),
-        col("order_type").alias("order_type"),
-        col("channel").alias("channel"),
-        col("amount").alias("amount"),
-        col("last_updated").alias("last_updated")
+
     )
     
     # Add control columns
