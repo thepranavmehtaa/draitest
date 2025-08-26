@@ -6,16 +6,10 @@ This document describes the data pipeline for the CatalogDB_product entity, incl
 ## Entity Information
 - **Raw Entity**: CatalogDB_product
 - **Curated Entity**: CatalogDB_product
-- **Generated**: 2025-08-26T08:43:06.079Z
+- **Generated**: 2025-08-26T09:02:01.299Z
 
 ## Column Mappings
-- **prod_id** → **prod_id**: Direct mapping
-- **svc_id** → **svc_id**: Direct mapping
-- **prod_name** → **prod_name**: Direct mapping
-- **prod_type** → **prod_type**: Direct mapping
-- **bundle** → **bundle**: Direct mapping
-- **plan** → **plan**: Direct mapping
-- **discount** → **discount**: Direct mapping
+
 
 ## Column Descriptions
 
