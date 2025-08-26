@@ -1,12 +1,34 @@
 -- DML Operations for BillingSystem_DimOrderItem
--- Generated on: 2025-08-26T09:02:07.183Z
+-- Generated on: 2025-08-26T09:18:51.829Z
 
 -- Insert new records into curated table
 INSERT INTO curated.BillingSystem_DimOrderItem (
-  
+  OrderItemID,
+  OrderID,
+  ProductID,
+  Quantity,
+  UnitPrice,
+  LineAmount,
+  Status,
+  updated_at,
+  version,
+  is_deleted,
+  _ingest_timestamp,
+  _source_system,
+  _record_status,
+  _update_timestamp,
+  _batch_id,
+  _created_by,
+  _updated_by
 )
 SELECT 
-
+  OrderItemID as OrderItemID,
+  OrderID as OrderID,
+  ProductID as ProductID,
+  Quantity as Quantity,
+  UnitPrice as UnitPrice,
+  LineAmount as LineAmount,
+  Status as Status
 FROM raw.BillingSystem_DimOrderItem;
 
 -- Update existing records
