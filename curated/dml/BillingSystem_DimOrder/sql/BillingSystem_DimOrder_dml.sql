@@ -1,5 +1,5 @@
 -- DML Operations for BillingSystem_DimOrder
--- Generated on: 2025-08-26T09:18:51.832Z
+-- Generated on: 2025-08-26T09:43:00.883Z
 
 -- Insert new records into curated table
 INSERT INTO curated.BillingSystem_DimOrder (

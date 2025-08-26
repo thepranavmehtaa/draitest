@@ -1,5 +1,5 @@
 # ALTER Commands for Entity: BillingSystem_DimOrder
-# Generated on: 2025-08-26T09:18:51.832Z
+# Generated on: 2025-08-26T09:43:00.883Z
 # These commands handle schema changes when new columns are added or existing columns are modified
 
 from pyspark.sql import SparkSession
@@ -19,7 +19,7 @@ def add_control_columns(df):
     df = df.withColumn("_source_system", lit("raw_BillingSystem_DimOrder"))
     df = df.withColumn("_record_status", lit("valid"))
     df = df.withColumn("_update_timestamp", current_timestamp())
-    df = df.withColumn("_batch_id", lit("batch_1756199931832"))
+    df = df.withColumn("_batch_id", lit("batch_1756201380883"))
     df = df.withColumn("_created_by", lit("system"))
     df = df.withColumn("_updated_by", lit("system"))
     return df
