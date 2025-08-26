@@ -1,5 +1,5 @@
 # DML Operations for Salesforce_account
-# Generated on: 2025-08-26T09:01:52.661Z
+# Generated on: 2025-08-26T09:30:54.422Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,7 +22,13 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-
+        col("account_id").alias("account_id"),
+        col("customer_id").alias("customer_id"),
+        col("acct_type").alias("acct_type"),
+        col("billing_cycle").alias("billing_cycle"),
+        col("currency").alias("currency"),
+        col("status").alias("status"),
+        col("created_at").alias("created_at")
     )
     
     # Add control columns
