@@ -1,12 +1,36 @@
 -- DML Operations for Salesforce_address
--- Generated on: 2025-08-26T09:01:50.691Z
+-- Generated on: 2025-08-26T09:18:51.795Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Salesforce_address (
-  
+  AddressID,
+  CustomerID,
+  Street,
+  City,
+  State,
+  Postcode,
+  Country,
+  AddressType,
+  updated_at,
+  version,
+  is_deleted,
+  _ingest_timestamp,
+  _source_system,
+  _record_status,
+  _update_timestamp,
+  _batch_id,
+  _created_by,
+  _updated_by
 )
 SELECT 
-
+  AddressID as AddressID,
+  CustomerID as CustomerID,
+  Street as Street,
+  City as City,
+  State as State,
+  Postcode as Postcode,
+  Country as Country,
+  AddressType as AddressType
 FROM raw.Salesforce_address;
 
 -- Update existing records
