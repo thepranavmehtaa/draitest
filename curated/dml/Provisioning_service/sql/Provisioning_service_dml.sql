@@ -1,12 +1,34 @@
 -- DML Operations for Provisioning_service
--- Generated on: 2025-08-26T09:01:56.835Z
+-- Generated on: 2025-08-26T11:31:20.290Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Provisioning_service (
-  
+  svc_id,
+  sub_ref,
+  svc_type,
+  svc_status,
+  start,
+  end,
+  qos,
+  updated_at,
+  version,
+  is_deleted,
+  _ingest_timestamp,
+  _source_system,
+  _record_status,
+  _update_timestamp,
+  _batch_id,
+  _created_by,
+  _updated_by
 )
 SELECT 
-
+  svc_id as svc_id,
+  sub_ref as sub_ref,
+  svc_type as svc_type,
+  svc_status as svc_status,
+  start as start,
+  end as end,
+  qos as qos
 FROM raw.Provisioning_service;
 
 -- Update existing records
