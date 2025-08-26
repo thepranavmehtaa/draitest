@@ -6,10 +6,17 @@ This document describes the data pipeline for the Salesforce_address entity, inc
 ## Entity Information
 - **Raw Entity**: Salesforce_address
 - **Curated Entity**: Salesforce_address
-- **Generated**: 2025-08-26T09:01:50.691Z
+- **Generated**: 2025-08-26T09:11:15.855Z
 
 ## Column Mappings
-
+- **AddressID** → **AddressID**: Direct mapping
+- **CustomerID** → **CustomerID**: Direct mapping
+- **Street** → **Street**: Direct mapping
+- **City** → **City**: Direct mapping
+- **State** → **State**: Direct mapping
+- **Postcode** → **Postcode**: Direct mapping
+- **Country** → **Country**: Direct mapping
+- **AddressType** → **AddressType**: Direct mapping
 
 ## Column Descriptions
 
