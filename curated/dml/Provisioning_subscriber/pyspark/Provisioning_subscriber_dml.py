@@ -1,5 +1,5 @@
 # DML Operations for Provisioning_subscriber
-# Generated on: 2025-08-26T09:01:54.716Z
+# Generated on: 2025-08-26T09:30:54.428Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,7 +22,14 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-
+        col("sub_id").alias("sub_id"),
+        col("contract_ref").alias("contract_ref"),
+        col("msisdn").alias("msisdn"),
+        col("sim").alias("sim"),
+        col("device_ref").alias("device_ref"),
+        col("sub_type").alias("sub_type"),
+        col("sub_status").alias("sub_status"),
+        col("activated").alias("activated")
     )
     
     # Add control columns
