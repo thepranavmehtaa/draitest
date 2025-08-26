@@ -1,5 +1,5 @@
 # DML Operations for BillingSystem_payment_method
-# Generated on: 2025-08-26T09:02:03.308Z
+# Generated on: 2025-08-26T09:30:54.447Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,7 +22,13 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-
+        col("PaymentMethodID").alias("PaymentMethodID"),
+        col("AccountID").alias("AccountID"),
+        col("PaymentType").alias("PaymentType"),
+        col("CardType").alias("CardType"),
+        col("MaskedCardNumber").alias("MaskedCardNumber"),
+        col("ExpiryDate").alias("ExpiryDate"),
+        col("Preferred").alias("Preferred")
     )
     
     # Add control columns
