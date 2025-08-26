@@ -1,5 +1,5 @@
 -- DML Operations for Provisioning_device_resource
--- Generated on: 2025-08-26T13:00:46.069Z
+-- Generated on: 2025-08-26T13:04:20.110Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Provisioning_device_resource (

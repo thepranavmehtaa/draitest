@@ -16,8 +16,13 @@ CREATE TABLE IF NOT EXISTS UsagePlatform_fact_usage (
     is_deleted BOOLEAN,
     new column VARCHAR(255),
     new column 2 VARCHAR(255),
-    test 2 VARCHAR(255)
+    test 2 VARCHAR(255),
+    column 1 VARCHAR(255),
+    plan_name VARCHAR(255)
 );
+
+-- Add new columns to existing table
+ALTER TABLE UsagePlatform_fact_usage ADD COLUMN plan_name VARCHAR(255);
 
 -- Insert transformed data
 INSERT INTO UsagePlatform_fact_usage
@@ -30,6 +35,7 @@ SELECT
     minutes as minutes,
     sms as sms,
     region as region,
-    roaming as roaming
+    roaming as roaming,
+    NULL as plan_name
 FROM raw_UsagePlatform_fact_usage;
 

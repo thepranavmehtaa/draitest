@@ -1,5 +1,5 @@
 -- DML Operations for Provisioning_service
--- Generated on: 2025-08-26T13:00:46.059Z
+-- Generated on: 2025-08-26T13:04:20.093Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Provisioning_service (

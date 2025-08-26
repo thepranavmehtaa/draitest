@@ -1,5 +1,5 @@
 # DML Operations for UsagePlatform_fact_usage
-# Generated on: 2025-08-26T13:00:45.986Z
+# Generated on: 2025-08-26T13:04:20.008Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -10,6 +10,10 @@ spark = SparkSession.builder \
     .appName("UsagePlatform_fact_usage_DML_Operations") \
     .config("spark.sql.adaptive.enabled", "true") \
     .getOrCreate()
+
+# Handle new columns for existing curated table
+# Note: In PySpark, you may need to recreate the table or use Delta Lake for schema evolution
+# For now, we'll add new columns during data processing
 
 # Read raw data
 raw_df = spark.read.parquet("path/to/raw/UsagePlatform_fact_usage")
@@ -37,8 +41,12 @@ if new_records.count() > 0:
         lit(None).cast("string").alias("_update_timestamp"),
         lit(None).cast("string").alias("_batch_id"),
         lit(None).cast("string").alias("_created_by"),
-        lit(None).cast("string").alias("_updated_by")
+        lit(None).cast("string").alias("_updated_by"),
+        lit(None).cast("string").alias("plan_name")
     )
+    
+    # Add new columns with default values
+    transformed_new = transformed_new.withColumn("plan_name", lit(None).cast("string"))
     
     # Add control columns
     transformed_new = transformed_new.withColumn("created_at", current_timestamp()) \
@@ -55,6 +63,9 @@ if existing_records.count() > 0:
     # Update logic here
     updated_records = existing_records.withColumn("updated_at", current_timestamp()) \
         .withColumn("version", col("version") + 1)
+    
+    # Add new columns to existing records
+    updated_records = updated_records.withColumn("plan_name", lit(None).cast("string"))
     
     # Write updated records (overwrite mode for simplicity)
     updated_records.write.mode("overwrite").parquet("path/to/curated/UsagePlatform_fact_usage_updated")
