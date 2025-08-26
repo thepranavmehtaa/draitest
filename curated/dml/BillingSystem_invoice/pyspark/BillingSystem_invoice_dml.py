@@ -1,5 +1,5 @@
 # DML Operations for BillingSystem_invoice
-# Generated on: 2025-08-26T09:02:05.148Z
+# Generated on: 2025-08-26T11:37:31.856Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,7 +22,13 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-
+        col("InvoiceID").alias("InvoiceID"),
+        col("AccountID").alias("AccountID"),
+        col("InvoiceDate").alias("InvoiceDate"),
+        col("DueDate").alias("DueDate"),
+        col("TotalAmount").alias("TotalAmount"),
+        col("Status").alias("Status"),
+        col("PaidDate").alias("PaidDate")
     )
     
     # Add control columns
