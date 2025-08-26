@@ -1,5 +1,5 @@
 -- DML Operations for Salesforce_contact_point
--- Generated on: 2025-08-26T08:43:06.053Z
+-- Generated on: 2025-08-26T09:18:51.791Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Salesforce_contact_point (
