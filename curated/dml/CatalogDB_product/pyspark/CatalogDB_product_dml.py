@@ -1,5 +1,5 @@
 # DML Operations for CatalogDB_product
-# Generated on: 2025-08-26T13:00:46.079Z
+# Generated on: 2025-08-26T13:04:20.120Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *

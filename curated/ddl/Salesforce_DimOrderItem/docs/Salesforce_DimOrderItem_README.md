@@ -6,7 +6,7 @@ This document describes the data pipeline for the Salesforce_DimOrderItem entity
 ## Entity Information
 - **Raw Entity**: Salesforce_DimOrderItem
 - **Curated Entity**: Salesforce_DimOrderItem
-- **Generated**: 2025-08-26T13:00:45.999Z
+- **Generated**: 2025-08-26T13:04:20.027Z
 
 ## Column Mappings
 - **OrderItemID** → **OrderItemID**: Direct mapping

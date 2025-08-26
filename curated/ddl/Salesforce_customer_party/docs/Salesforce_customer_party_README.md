@@ -6,7 +6,7 @@ This document describes the data pipeline for the Salesforce_customer_party enti
 ## Entity Information
 - **Raw Entity**: Salesforce_customer_party
 - **Curated Entity**: Salesforce_customer_party
-- **Generated**: 2025-08-26T13:00:46.016Z
+- **Generated**: 2025-08-26T13:04:20.045Z
 
 ## Column Mappings
 - **customer_id** → **customer_id**: Direct mapping

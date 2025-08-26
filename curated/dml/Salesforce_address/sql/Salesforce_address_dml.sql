@@ -1,5 +1,5 @@
 -- DML Operations for Salesforce_address
--- Generated on: 2025-08-26T13:00:46.034Z
+-- Generated on: 2025-08-26T13:04:20.066Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Salesforce_address (

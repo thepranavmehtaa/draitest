@@ -1,5 +1,8 @@
 -- DML Operations for UsagePlatform_fact_usage
--- Generated on: 2025-08-26T13:00:45.986Z
+-- Generated on: 2025-08-26T13:04:20.008Z
+
+-- Add new columns to existing table
+ALTER TABLE curated.UsagePlatform_fact_usage ADD COLUMN IF NOT EXISTS plan_name VARCHAR(255);
 
 -- Insert new records into curated table
 INSERT INTO curated.UsagePlatform_fact_usage (
@@ -17,7 +20,9 @@ INSERT INTO curated.UsagePlatform_fact_usage (
   is_deleted,
   new column,
   new column 2,
-  test 2
+  test 2,
+  column 1,
+  plan_name
 )
 SELECT 
   usage_id as usage_id,
@@ -35,7 +40,8 @@ SELECT
   _update_timestamp,
   _batch_id,
   _created_by,
-  _updated_by
+  _updated_by,
+  NULL as plan_name
 FROM raw.UsagePlatform_fact_usage;
 
 -- Update existing records
