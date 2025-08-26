@@ -1,5 +1,5 @@
 # DML Operations for UsagePlatform_fact_usage
-# Generated on: 2025-08-26T12:38:22.970Z
+# Generated on: 2025-08-26T13:00:45.986Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -30,7 +30,14 @@ if new_records.count() > 0:
         col("minutes").alias("minutes"),
         col("sms").alias("sms"),
         col("region").alias("region"),
-        col("roaming").alias("roaming")
+        col("roaming").alias("roaming"),
+        lit(None).cast("string").alias("_ingest_timestamp"),
+        lit(None).cast("string").alias("_source_system"),
+        lit(None).cast("string").alias("_record_status"),
+        lit(None).cast("string").alias("_update_timestamp"),
+        lit(None).cast("string").alias("_batch_id"),
+        lit(None).cast("string").alias("_created_by"),
+        lit(None).cast("string").alias("_updated_by")
     )
     
     # Add control columns

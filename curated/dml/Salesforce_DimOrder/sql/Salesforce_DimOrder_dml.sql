@@ -1,5 +1,5 @@
 -- DML Operations for Salesforce_DimOrder
--- Generated on: 2025-08-26T12:38:23.233Z
+-- Generated on: 2025-08-26T13:00:46.008Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Salesforce_DimOrder (

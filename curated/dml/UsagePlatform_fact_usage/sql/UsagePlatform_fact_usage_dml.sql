@@ -1,5 +1,5 @@
 -- DML Operations for UsagePlatform_fact_usage
--- Generated on: 2025-08-26T12:38:22.970Z
+-- Generated on: 2025-08-26T13:00:45.986Z
 
 -- Insert new records into curated table
 INSERT INTO curated.UsagePlatform_fact_usage (
@@ -15,13 +15,9 @@ INSERT INTO curated.UsagePlatform_fact_usage (
   updated_at,
   version,
   is_deleted,
-  _ingest_timestamp,
-  _source_system,
-  _record_status,
-  _update_timestamp,
-  _batch_id,
-  _created_by,
-  _updated_by
+  new column,
+  new column 2,
+  test 2
 )
 SELECT 
   usage_id as usage_id,
@@ -32,7 +28,14 @@ SELECT
   minutes as minutes,
   sms as sms,
   region as region,
-  roaming as roaming
+  roaming as roaming,
+  _ingest_timestamp,
+  _source_system,
+  _record_status,
+  _update_timestamp,
+  _batch_id,
+  _created_by,
+  _updated_by
 FROM raw.UsagePlatform_fact_usage;
 
 -- Update existing records
