@@ -1,5 +1,5 @@
 -- DML Operations for BillingSystem_invoice
--- Generated on: 2025-08-26T12:38:23.285Z
+-- Generated on: 2025-08-26T13:00:46.095Z
 
 -- Insert new records into curated table
 INSERT INTO curated.BillingSystem_invoice (

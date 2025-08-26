@@ -6,7 +6,7 @@ This document describes the data pipeline for the Provisioning_subscriber entity
 ## Entity Information
 - **Raw Entity**: Provisioning_subscriber
 - **Curated Entity**: Provisioning_subscriber
-- **Generated**: 2025-08-26T12:38:23.265Z
+- **Generated**: 2025-08-26T13:00:46.051Z
 
 ## Column Mappings
 - **sub_id** → **sub_id**: Direct mapping

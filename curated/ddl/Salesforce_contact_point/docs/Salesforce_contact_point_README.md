@@ -6,7 +6,7 @@ This document describes the data pipeline for the Salesforce_contact_point entit
 ## Entity Information
 - **Raw Entity**: Salesforce_contact_point
 - **Curated Entity**: Salesforce_contact_point
-- **Generated**: 2025-08-26T12:38:23.254Z
+- **Generated**: 2025-08-26T13:00:46.025Z
 
 ## Column Mappings
 - **ContactPointID** → **ContactPointID**: Direct mapping
