@@ -1,5 +1,5 @@
 -- DML Operations for UsagePlatform_fact_usage
--- Generated on: 2025-08-26T11:42:05.090Z
+-- Generated on: 2025-08-26T12:38:22.970Z
 
 -- Insert new records into curated table
 INSERT INTO curated.UsagePlatform_fact_usage (
