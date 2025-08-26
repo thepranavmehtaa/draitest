@@ -6,7 +6,7 @@ This document describes the data pipeline for the BillingSystem_DimOrderItem ent
 ## Entity Information
 - **Raw Entity**: BillingSystem_DimOrderItem
 - **Curated Entity**: BillingSystem_DimOrderItem
-- **Generated**: 2025-08-26T08:39:08.767Z
+- **Generated**: 2025-08-26T08:40:04.948Z
 
 ## Column Mappings
 - **OrderItemID** → **OrderItemID**: Direct mapping

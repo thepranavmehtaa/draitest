@@ -6,7 +6,7 @@ This document describes the data pipeline for the CatalogDB_product entity, incl
 ## Entity Information
 - **Raw Entity**: CatalogDB_product
 - **Curated Entity**: CatalogDB_product
-- **Generated**: 2025-08-26T08:39:08.755Z
+- **Generated**: 2025-08-26T08:40:04.935Z
 
 ## Column Mappings
 - **prod_id** → **prod_id**: Direct mapping

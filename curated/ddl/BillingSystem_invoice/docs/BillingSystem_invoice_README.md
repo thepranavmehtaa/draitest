@@ -6,7 +6,7 @@ This document describes the data pipeline for the BillingSystem_invoice entity, 
 ## Entity Information
 - **Raw Entity**: BillingSystem_invoice
 - **Curated Entity**: BillingSystem_invoice
-- **Generated**: 2025-08-26T08:39:08.763Z
+- **Generated**: 2025-08-26T08:40:04.943Z
 
 ## Column Mappings
 - **InvoiceID** → **InvoiceID**: Direct mapping
