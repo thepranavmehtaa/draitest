@@ -1,5 +1,5 @@
 -- ALTER Commands for Entity: BillingSystem_DimOrder
--- Generated on: 2025-08-26T09:18:51.832Z
+-- Generated on: 2025-08-26T09:30:54.467Z
 -- These commands handle schema changes when new columns are added or existing columns are modified
 
 -- Add control columns for data lineage (if not already present)
