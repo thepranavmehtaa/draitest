@@ -1,12 +1,36 @@
 -- DML Operations for BillingSystem_DimOrder
--- Generated on: 2025-08-26T09:02:09.158Z
+-- Generated on: 2025-08-26T09:18:51.832Z
 
 -- Insert new records into curated table
 INSERT INTO curated.BillingSystem_DimOrder (
-  
+  id,
+  custom,
+  date,
+  status,
+  type,
+  origin,
+  value,
+  updated,
+  updated_at,
+  version,
+  is_deleted,
+  _ingest_timestamp,
+  _source_system,
+  _record_status,
+  _update_timestamp,
+  _batch_id,
+  _created_by,
+  _updated_by
 )
 SELECT 
-
+  id as id,
+  custom as custom,
+  date as date,
+  status as status,
+  type as type,
+  origin as origin,
+  value as value,
+  updated as updated
 FROM raw.BillingSystem_DimOrder;
 
 -- Update existing records

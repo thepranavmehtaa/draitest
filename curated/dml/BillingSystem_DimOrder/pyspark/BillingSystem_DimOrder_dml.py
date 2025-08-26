@@ -1,5 +1,5 @@
 # DML Operations for BillingSystem_DimOrder
-# Generated on: 2025-08-26T09:02:09.158Z
+# Generated on: 2025-08-26T09:18:51.832Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,7 +22,14 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-
+        col("id").alias("id"),
+        col("custom").alias("custom"),
+        col("date").alias("date"),
+        col("status").alias("status"),
+        col("type").alias("type"),
+        col("origin").alias("origin"),
+        col("value").alias("value"),
+        col("updated").alias("updated")
     )
     
     # Add control columns
