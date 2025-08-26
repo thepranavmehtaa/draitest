@@ -6,7 +6,7 @@ This document describes the data pipeline for the BillingSystem_payment_method e
 ## Entity Information
 - **Raw Entity**: BillingSystem_payment_method
 - **Curated Entity**: BillingSystem_payment_method
-- **Generated**: 2025-08-26T08:39:08.758Z
+- **Generated**: 2025-08-26T08:40:04.940Z
 
 ## Column Mappings
 - **PaymentMethodID** → **PaymentMethodID**: Direct mapping

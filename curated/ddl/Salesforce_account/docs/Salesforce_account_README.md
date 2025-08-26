@@ -6,7 +6,7 @@ This document describes the data pipeline for the Salesforce_account entity, inc
 ## Entity Information
 - **Raw Entity**: Salesforce_account
 - **Curated Entity**: Salesforce_account
-- **Generated**: 2025-08-26T08:39:08.739Z
+- **Generated**: 2025-08-26T08:40:04.913Z
 
 ## Column Mappings
 - **account_id** → **account_id**: Direct mapping
