@@ -1,5 +1,5 @@
 -- DML Operations for Salesforce_customer_party
--- Generated on: 2025-08-26T11:37:31.820Z
+-- Generated on: 2025-08-26T11:38:39.319Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Salesforce_customer_party (
