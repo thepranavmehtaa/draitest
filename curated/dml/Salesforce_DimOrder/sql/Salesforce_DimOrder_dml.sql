@@ -1,12 +1,36 @@
 -- DML Operations for Salesforce_DimOrder
--- Generated on: 2025-08-26T09:01:44.712Z
+-- Generated on: 2025-08-26T11:31:29.650Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Salesforce_DimOrder (
-  
+  order_id,
+  customer_id,
+  order_date,
+  order_status,
+  order_type,
+  channel,
+  amount,
+  last_updated,
+  updated_at,
+  version,
+  is_deleted,
+  _ingest_timestamp,
+  _source_system,
+  _record_status,
+  _update_timestamp,
+  _batch_id,
+  _created_by,
+  _updated_by
 )
 SELECT 
-
+  order_id as order_id,
+  customer_id as customer_id,
+  order_date as order_date,
+  order_status as order_status,
+  order_type as order_type,
+  channel as channel,
+  amount as amount,
+  last_updated as last_updated
 FROM raw.Salesforce_DimOrder;
 
 -- Update existing records

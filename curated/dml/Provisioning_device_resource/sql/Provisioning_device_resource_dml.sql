@@ -1,12 +1,36 @@
 -- DML Operations for Provisioning_device_resource
--- Generated on: 2025-08-26T09:01:59.144Z
+-- Generated on: 2025-08-26T11:31:29.678Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Provisioning_device_resource (
-  
+  dev_id,
+  dev_type,
+  make,
+  model,
+  imei,
+  os,
+  activated,
+  warranty,
+  updated_at,
+  version,
+  is_deleted,
+  _ingest_timestamp,
+  _source_system,
+  _record_status,
+  _update_timestamp,
+  _batch_id,
+  _created_by,
+  _updated_by
 )
 SELECT 
-
+  dev_id as dev_id,
+  dev_type as dev_type,
+  make as make,
+  model as model,
+  imei as imei,
+  os as os,
+  activated as activated,
+  warranty as warranty
 FROM raw.Provisioning_device_resource;
 
 -- Update existing records

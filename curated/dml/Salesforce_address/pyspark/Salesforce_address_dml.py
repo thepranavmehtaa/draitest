@@ -1,5 +1,5 @@
 # DML Operations for Salesforce_address
-# Generated on: 2025-08-26T09:01:50.691Z
+# Generated on: 2025-08-26T11:31:29.664Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,7 +22,14 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-
+        col("AddressID").alias("AddressID"),
+        col("CustomerID").alias("CustomerID"),
+        col("Street").alias("Street"),
+        col("City").alias("City"),
+        col("State").alias("State"),
+        col("Postcode").alias("Postcode"),
+        col("Country").alias("Country"),
+        col("AddressType").alias("AddressType")
     )
     
     # Add control columns
