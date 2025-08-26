@@ -1,12 +1,36 @@
 -- DML Operations for Provisioning_subscriber
--- Generated on: 2025-08-26T09:01:54.716Z
+-- Generated on: 2025-08-26T09:43:00.852Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Provisioning_subscriber (
-  
+  sub_id,
+  contract_ref,
+  msisdn,
+  sim,
+  device_ref,
+  sub_type,
+  sub_status,
+  activated,
+  updated_at,
+  version,
+  is_deleted,
+  _ingest_timestamp,
+  _source_system,
+  _record_status,
+  _update_timestamp,
+  _batch_id,
+  _created_by,
+  _updated_by
 )
 SELECT 
-
+  sub_id as sub_id,
+  contract_ref as contract_ref,
+  msisdn as msisdn,
+  sim as sim,
+  device_ref as device_ref,
+  sub_type as sub_type,
+  sub_status as sub_status,
+  activated as activated
 FROM raw.Provisioning_subscriber;
 
 -- Update existing records
