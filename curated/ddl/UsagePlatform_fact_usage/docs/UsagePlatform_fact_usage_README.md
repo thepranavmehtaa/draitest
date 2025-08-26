@@ -6,10 +6,18 @@ This document describes the data pipeline for the UsagePlatform_fact_usage entit
 ## Entity Information
 - **Raw Entity**: UsagePlatform_fact_usage
 - **Curated Entity**: UsagePlatform_fact_usage
-- **Generated**: 2025-08-26T09:01:40.620Z
+- **Generated**: 2025-08-26T09:30:54.179Z
 
 ## Column Mappings
-
+- **usage_id** → **usage_id**: Direct mapping
+- **sub_id** → **sub_id**: Direct mapping
+- **usage_date** → **usage_date**: Direct mapping
+- **type** → **type**: Direct mapping
+- **volume** → **volume**: Direct mapping
+- **minutes** → **minutes**: Direct mapping
+- **sms** → **sms**: Direct mapping
+- **region** → **region**: Direct mapping
+- **roaming** → **roaming**: Direct mapping
 
 ## Column Descriptions
 
