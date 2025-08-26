@@ -6,10 +6,17 @@ This document describes the data pipeline for the Provisioning_device_resource e
 ## Entity Information
 - **Raw Entity**: Provisioning_device_resource
 - **Curated Entity**: Provisioning_device_resource
-- **Generated**: 2025-08-26T09:01:59.144Z
+- **Generated**: 2025-08-26T09:18:51.812Z
 
 ## Column Mappings
-
+- **dev_id** → **dev_id**: Direct mapping
+- **dev_type** → **dev_type**: Direct mapping
+- **make** → **make**: Direct mapping
+- **model** → **model**: Direct mapping
+- **imei** → **imei**: Direct mapping
+- **os** → **os**: Direct mapping
+- **activated** → **activated**: Direct mapping
+- **warranty** → **warranty**: Direct mapping
 
 ## Column Descriptions
 

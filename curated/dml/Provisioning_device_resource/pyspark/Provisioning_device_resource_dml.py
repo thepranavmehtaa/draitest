@@ -1,5 +1,5 @@
 # DML Operations for Provisioning_device_resource
-# Generated on: 2025-08-26T09:01:59.145Z
+# Generated on: 2025-08-26T09:18:51.812Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,7 +22,14 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-
+        col("dev_id").alias("dev_id"),
+        col("dev_type").alias("dev_type"),
+        col("make").alias("make"),
+        col("model").alias("model"),
+        col("imei").alias("imei"),
+        col("os").alias("os"),
+        col("activated").alias("activated"),
+        col("warranty").alias("warranty")
     )
     
     # Add control columns
