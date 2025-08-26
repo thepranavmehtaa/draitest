@@ -1,5 +1,5 @@
 # DML Operations for Provisioning_service
-# Generated on: 2025-08-26T09:01:56.835Z
+# Generated on: 2025-08-26T09:11:15.869Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -22,7 +22,13 @@ new_records = raw_df.join(curated_df, "id", "left_anti")
 if new_records.count() > 0:
     # Transform new records according to mappings
     transformed_new = new_records.select(
-
+        col("svc_id").alias("svc_id"),
+        col("sub_ref").alias("sub_ref"),
+        col("svc_type").alias("svc_type"),
+        col("svc_status").alias("svc_status"),
+        col("start").alias("start"),
+        col("end").alias("end"),
+        col("qos").alias("qos")
     )
     
     # Add control columns
