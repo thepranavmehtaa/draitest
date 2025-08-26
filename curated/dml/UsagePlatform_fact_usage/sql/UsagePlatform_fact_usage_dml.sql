@@ -13,7 +13,6 @@ INSERT INTO curated.UsagePlatform_fact_usage (
   region,
   roaming,
   updated_at,
-  version,
   is_deleted,
   _ingest_timestamp,
   _source_system,
