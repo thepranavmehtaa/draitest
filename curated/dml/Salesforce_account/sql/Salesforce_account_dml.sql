@@ -1,5 +1,5 @@
 -- DML Operations for Salesforce_account
--- Generated on: 2025-08-29T10:02:07.719Z
+-- Generated on: 2025-08-29T10:31:00.551Z
 
 -- Insert new records into curated table
 INSERT INTO curated.Salesforce_account (

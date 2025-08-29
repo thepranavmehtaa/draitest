@@ -1,5 +1,5 @@
 # DML Operations for BillingSystem_invoice
-# Generated on: 2025-08-29T10:02:07.849Z
+# Generated on: 2025-08-29T10:31:00.659Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *

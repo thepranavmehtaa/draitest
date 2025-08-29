@@ -1,5 +1,5 @@
 # DML Operations for UsagePlatform_fact_usage
-# Generated on: 2025-08-29T10:02:07.589Z
+# Generated on: 2025-08-29T10:31:00.427Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *

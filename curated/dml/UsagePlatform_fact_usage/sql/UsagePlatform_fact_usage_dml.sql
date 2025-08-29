@@ -1,5 +1,5 @@
 -- DML Operations for UsagePlatform_fact_usage
--- Generated on: 2025-08-29T10:02:07.589Z
+-- Generated on: 2025-08-29T10:31:00.427Z
 
 -- Add new columns to existing table
 ALTER TABLE curated.UsagePlatform_fact_usage ADD COLUMN IF NOT EXISTS plan_name VARCHAR(255);

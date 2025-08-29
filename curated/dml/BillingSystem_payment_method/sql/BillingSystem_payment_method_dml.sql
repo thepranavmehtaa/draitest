@@ -1,5 +1,5 @@
 -- DML Operations for BillingSystem_payment_method
--- Generated on: 2025-08-29T10:02:07.824Z
+-- Generated on: 2025-08-29T10:31:00.640Z
 
 -- Insert new records into curated table
 INSERT INTO curated.BillingSystem_payment_method (
