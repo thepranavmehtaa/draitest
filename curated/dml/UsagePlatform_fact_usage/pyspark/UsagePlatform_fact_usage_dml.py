@@ -1,5 +1,5 @@
 # DML Operations for UsagePlatform_fact_usage
-# Generated on: 2025-08-26T13:04:20.008Z
+# Generated on: 2025-08-29T10:02:07.589Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -42,11 +42,13 @@ if new_records.count() > 0:
         lit(None).cast("string").alias("_batch_id"),
         lit(None).cast("string").alias("_created_by"),
         lit(None).cast("string").alias("_updated_by"),
-        lit(None).cast("string").alias("plan_name")
+        lit(None).cast("string").alias("plan_name"),
+        lit(None).cast("string").alias("column2_test")
     )
     
     # Add new columns with default values
     transformed_new = transformed_new.withColumn("plan_name", lit(None).cast("string"))
+    transformed_new = transformed_new.withColumn("column2_test", lit(None).cast("string"))
     
     # Add control columns
     transformed_new = transformed_new.withColumn("created_at", current_timestamp()) \
@@ -66,6 +68,7 @@ if existing_records.count() > 0:
     
     # Add new columns to existing records
     updated_records = updated_records.withColumn("plan_name", lit(None).cast("string"))
+    updated_records = updated_records.withColumn("column2_test", lit(None).cast("string"))
     
     # Write updated records (overwrite mode for simplicity)
     updated_records.write.mode("overwrite").parquet("path/to/curated/UsagePlatform_fact_usage_updated")

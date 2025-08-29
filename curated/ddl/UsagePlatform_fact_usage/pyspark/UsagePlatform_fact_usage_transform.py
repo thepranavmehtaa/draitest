@@ -11,6 +11,7 @@ df = spark.read.format("csv").option("header", "true").load("path/to/raw/data")
 # Apply transformations
 # New columns
 df = df.withColumn("plan_name", lit(null).cast("string"))
+df = df.withColumn("column2_test", lit(null).cast("string"))
 
 # Write the processed data
 df.write.mode("overwrite").parquet("path/to/curated/data")
