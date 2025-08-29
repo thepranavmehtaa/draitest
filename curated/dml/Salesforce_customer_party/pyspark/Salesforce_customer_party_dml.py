@@ -1,5 +1,5 @@
 # DML Operations for Salesforce_customer_party
-# Generated on: 2025-08-26T13:04:20.045Z
+# Generated on: 2025-08-29T10:02:07.654Z
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *

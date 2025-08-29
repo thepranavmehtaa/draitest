@@ -6,7 +6,7 @@ This document describes the data pipeline for the Provisioning_service entity, i
 ## Entity Information
 - **Raw Entity**: Provisioning_service
 - **Curated Entity**: Provisioning_service
-- **Generated**: 2025-08-26T13:04:20.093Z
+- **Generated**: 2025-08-29T10:02:07.757Z
 
 ## Column Mappings
 - **svc_id** → **svc_id**: Direct mapping

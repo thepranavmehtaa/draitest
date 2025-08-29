@@ -1,5 +1,5 @@
 -- DML Operations for CatalogDB_product
--- Generated on: 2025-08-26T13:04:20.120Z
+-- Generated on: 2025-08-29T10:02:07.799Z
 
 -- Insert new records into curated table
 INSERT INTO curated.CatalogDB_product (
